@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        let counter = 0; //SET COUNTER
+
+        while (counter < 100) { //LOOP THROUGH 100 TIMES
+            counter++;
+            if (counter % 3 == 0 && counter % 5 == 0) { //CHECK IF NUMBER IS BOTH DIVISIBLE BY 3 AND 5 TO GET FIZZ BUZZ
+                console.log('FizzBuzz');
+            } else if (counter % 5 == 0) { // REMANINDER IS 0 SO IT RETURNS TRUE AND RUNS THIS LINE
+                console.log('Buzz');
+            } else if (counter % 3 == 0) {
+                console.log('Fizz');
+            } else { //ALL OTHER NUMBERS WILL BE SHOWN
+                console.log(counter);
+            }
+        }
+    </script>
+</body>
+
+</html>
