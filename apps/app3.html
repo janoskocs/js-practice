@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 3</title>
+</head>
+
+<body>
+
+    <script>
+
+        function log(element) {
+            console.log(element);
+        }
+
+        let board = "";
+        let line = "";
+        let width = 10;
+        let height = 15;
+
+        //I HAVE AN EMPTY BOARD
+        //I NEED TO GENERATE # BASED ON THE WIDTH WITH SPACES IN BETWEEN
+        //I NEED TO GENERATE ROWS BASED ON THE HEIGHT
+        //IF THE ROW IS EVEN THEN ADD AN EXTRA SPACE IN THE BEGINNING OF
+
+        for (let i = 0; i < width; i++) {
+            line += "# "; // HERE I GENERATE THE LINE WITH A FOR LOOP ADDDING THE DASH TO THE VARIABLE
+        }
+
+        if (height > 1) {
+            line += "\n"; //ADD A NEW LINE IF THE HEIGHT IS MORE THAN 1 SO EACH NEW LINE CAN BE ON THEIR OWN
+        }
+        for (let j = 0; j < height; j++) { //HERE I ADD THE LINES TO THE BOARD BY THE AMOUNT OF HEIGHT
+            if (j % 2 == 0) { // HERE I CHECK IF THE ROWS ARE EVEN SO THAT I CAN ADD AN EXTRA SPACE IN THE BEGINNING OF THAT PARTICULAR LINE
+                board += " " + line;
+            } else {
+                board += line; // BUT IF THE ROW IS NOT EVEN THEN I WILL NOT ADD THE EXTRA SPACE
+            }
+        }
+        log(board);
+
+    </script>
+</body>
+
+</html>
