@@ -11,7 +11,29 @@
 
     <script>
 
+        let countBs = function (string) {
+            let matchedB = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i].match('B')) {
+                    matchedB++;
+                    console.log(string[i] + matchedB);
+                }
+            }
+        }
 
+        //countBs('BiBibi');
+
+        let countChar = function (string, char) {//FUNCTION NEEDS A STRING AND CHAR
+            let matchedCharCount = 0; //INITIAL MATCH COUNT
+            for (let i = 0; i < string.length; i++) { //ITERATE THROGUH THE STRING
+                if (string[i].match(char)) { //CHECK EACH STRING IF IT MATCHES THE INPUT CHAR
+                    matchedCharCount++; //IF IT DOES ADD THE MATCHED CHAR COUNT
+                    console.log(string[i] + matchedCharCount);//OUTPUT THE MATCHED CHAR AND ITS NUMBER
+                }
+            }
+        }
+
+        countChar("Hi guys, I will be the best programmer", "m");
     </script>
 </body>
 
