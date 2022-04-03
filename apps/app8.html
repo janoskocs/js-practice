@@ -11,14 +11,29 @@
 
     <script>
 
-        function range(start, end) {
+        function range(start, end, step) {
             let results = [];
-            for (let i = start; i <= end; i++) {
-                results.push(i);
-            }
-            return results;
-        }
 
+            if (step < 0) {
+                let positiveStep = Math.abs(step);// TURN NEGATIVE TO POSITIVE
+                for (let i = start; i <= end; i += positiveStep) {
+                    results.push(i);
+
+                }
+                return results.reverse(); // RETURN ARRAY IN REVERSE AS IT WAS A NEGATIVE INPUT
+            }
+            else if (step > 0) {
+                for (let i = start; i <= end; i += step) {
+                    results.push(i); // PUSH ACCORDING TO THE INPUT NUMBER OF STEP
+                }
+                return results;
+            } else if (step === undefined || step === 0) {
+                for (let i = start; i <= end; i++) {
+                    results.push(i); // STANDARD 1 
+                }
+                return results;
+            }
+        }
 
         function sum(arrayList) {
             let sumUp = 0;
@@ -27,8 +42,9 @@
             }
             return sumUp;
         }
-        console.log(range(1, 10));
-        console.log(sum(range(1, 10)));
+
+        console.log(range(2, 5, -1));
+        //console.log(sum(range(1, 10)));
     </script>
 </body>
 
