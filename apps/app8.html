@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 8</title>
+</head>
+
+<body>
+
+    <script>
+
+        function range(start, end) {
+            let results = [];
+            for (let i = start; i <= end; i++) {
+                results.push(i);
+            }
+            return results;
+        }
+
+
+        function sum(arrayList) {
+            let sumUp = 0;
+            for (let i = 0; i < arrayList.length; i++) {
+                sumUp += arrayList[i];
+            }
+            return sumUp;
+        }
+        console.log(range(1, 10));
+        console.log(sum(range(1, 10)));
+    </script>
+</body>
+
+</html>
