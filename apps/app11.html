@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 10</title>
+</head>
+
+<body>
+
+    <script>
+        let maximum = parseInt(prompt("Enter the maximum number!"));
+
+        while (!maximum) {
+            maximum = parseInt(prompt("Enter the maximum number!"));
+        }
+
+
+        const targetNum = Math.floor(Math.random() * maximum) + 1;
+        let guess = parseInt(prompt("Enter your first guess!"));
+
+        let attempts = 1;
+        while (parseInt(guess) !== targetNum) {
+            if (guess === 'q') break;
+            attempts++;
+            if (guess > targetNum) {
+                guess = ("Too high! enter a new guess:");
+            } else {
+                guess = prompt("Too low!");
+            }
+        }
+
+        console.log(`you got it! it tookyou ${attempts} guesses`);
+    </script>
+</body>
+
+</html>
