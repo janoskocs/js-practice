@@ -11,7 +11,24 @@
 
     <script>
 
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let reversedArr = [];
+        function reverseArray(arr) {
+            if (array.length !== 0) {//THIS WILL ENSURE THE RECURSIVE FUNCTION TO RUN
+                reversedArr.push(array.pop());// PUSH THE LAST ELEMENT TO THE FIRST INDEX OF THE NEW ARRAY
+                reverseArray(arr);//CALL THE FUNCTION AGAIN RECURSIVE
+            }
+            return reversedArr;
+        }
+        //console.log(reverseArray(array));
 
+        function reverseArrayInPlace(arr) {
+            for (let item of [...arr]) {
+                arr.unshift(item);
+            }
+            return reversedArr = arr;
+        }
+        console.log(reverseArrayInPlace(array));
     </script>
 </body>
 

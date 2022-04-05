@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 10</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [1, 2, 3, 4, 5];
+
+        let listFromArray = function ([...arrValue]) {
+            const objects = {};  //INITIALIZE OBJECT
+
+            for (let element of arrValue) { //ITERATE THROUGH EACH ARRAY ELEMENT
+                objects[element] = { // BUILD THE OBJECT
+                    value: element,
+                    rest: {
+                        value: element,
+                        rest: {
+                            value: element,
+                            rest: null
+                        }
+                    }
+                };
+            }
+            return objects;
+        }
+        console.log(listFromArray(array));
+
+        function listToArray(list) {
+            //PRODUCE AN ARRAY FROM A LIST
+        }
+    </script>
+</body>
+
+</html>
