@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 12</title>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <ul>
+        <li>"new" add new todo</li>
+        <li>"list" list all todos</li>
+        <li>"delete" delete specific todo</li>
+        <li>"quit" quit app</li>
+    </ul>
+    <script>
+        let quitStatus = false;
+        let input;
+        let list = [];
+
+        while (!quitStatus) {
+            input = prompt("What would you like to do?");
+
+            if (input === "quit") {
+                quitStatus = true;
+                break;
+            } else if (input === "new") {
+                input = prompt("What is your todo?");
+                list.push(input);
+            } else if (input === "list") {
+                console.log(`*** Your todo list ***
+                ${list}
+                *** End of list ***                
+                `);
+            }
+        }
+    </script>
+</body>
+
+</html>
