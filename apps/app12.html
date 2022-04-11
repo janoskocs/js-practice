@@ -16,26 +16,33 @@
         <li>"quit" quit app</li>
     </ul>
     <script>
-        let quitStatus = false;
-        let input;
-        let list = [];
 
-        while (!quitStatus) {
+        let input = prompt("What would you like to do?");
+        const todos = [];
+
+        while (input !== 'quit' && input !== 'q') { //either one of them 
+
+            if (input === 'list') {
+                console.log("**************");
+                for (let i = 0; i < todos.length; i++) {
+                    console.log(`${i}: ${todos[i]}`);
+                }
+                console.log("**************");
+            } else if (input === 'new') {
+                const newTodo = prompt('What is your new todo?');
+                todos.push(newTodo);
+                console.log(`${newTodo} added to the list.`);
+            } else if (input === 'delete') {
+                const index = prompt("What would you like to delete?");
+                todos.splice(index, 1);
+
+            }
             input = prompt("What would you like to do?");
 
-            if (input === "quit") {
-                quitStatus = true;
-                break;
-            } else if (input === "new") {
-                input = prompt("What is your todo?");
-                list.push(input);
-            } else if (input === "list") {
-                console.log(`*** Your todo list ***
-                ${list}
-                *** End of list ***                
-                `);
-            }
+
         }
+
+        console.log("You quit the app.");
     </script>
 </body>
 
