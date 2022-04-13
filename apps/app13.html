@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 12</title>
+</head>
+
+<body>
+
+    <script>
+
+        // DEFINE YOUR FUNCTION BELOW:
+
+        function lastElement(arr) {
+
+            if (arr.slice(-1)[0] == null) {
+                return null;
+            } else {
+                return arr.slice(-1)[0];
+            }
+        }
+
+        // DEFINE YOUR FUNCTION BELOW:
+        function capitalize(str) {
+            let capitalized = "";
+            let firstLetter = str.slice(0, 1).toUpperCase();
+            let restLetters = str.slice(1);
+            capitalized += firstLetter;
+            capitalized += restLetters;
+            return capitalized;
+        }
+
+        function sumArray(arr) {
+
+            let count = 0;
+            let sum = 0;
+            while (count < arr.length) {
+                sum += arr[count];
+                count++;
+            }
+
+            return sum;
+        }
+
+        // DEFINE YOUR FUNCTION BELOW:
+
+        function returnDay(num) {
+            const days = [null, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            if (num > 7) {
+                return null;
+            } else if (num < 0) {
+                return null;
+            }
+            return days[num];
+        }
+    </script>
+</body>
+
+</html>
